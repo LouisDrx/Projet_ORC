@@ -25,6 +25,12 @@ class RobotControlApp(tk.Tk):
         self.entry_port = ttk.Entry(self.frame_connexion)
         self.entry_port.grid(row=1, column=1, padx=5, pady=5)
 
+        self.btn_connect = ttk.Button(self.frame_connexion, text="CONNECT", command=self.check_connection)
+        self.btn_connect.grid(row=1, column=2, padx=5, pady=5)
+        
+        self.label_status = ttk.Label(self.frame_connexion, text="Statut: Déconnecté", foreground="red")
+        self.label_status.grid(row=0, column=2, padx=5, pady=5)        
+
         self.btn_start = ttk.Button(self.frame_connexion, text="START", command=self.start_acquisition)
         self.btn_start.grid(row=2, column=0, padx=5, pady=5)
         self.btn_stop = ttk.Button(self.frame_connexion, text="STOP", command=self.stop_acquisition)
@@ -67,6 +73,19 @@ class RobotControlApp(tk.Tk):
         # Variables pour l'état de l'acquisition
         self.acquisition_en_cours = False
 
+    def check_connection(self):
+        ip = self.entry_ip.get()
+        port = self.entry_port.get()
+        try:
+            with socket.create_connection((ip, int(port)), timeout=5):
+                self.label_status.config(text="Statut: Connecté", foreground="green")
+                self.btn_start.config(state=tk.NORMAL)
+                self.btn_stop.config(state=tk.NORMAL)
+        except (socket.timeout, ConnectionRefusedError, OSError):
+            self.label_status.config(text="Statut: Déconnecté", foreground="red")
+            self.btn_start.config(state=tk.DISABLED)
+            self.btn_stop.config(state=tk.DISABLED)
+    
     def start_acquisition(self):
         self.acquisition_en_cours = True
         self.label_acquisition.config(text="Acquisition en cours", foreground="green")
