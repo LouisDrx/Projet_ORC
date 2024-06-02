@@ -8,7 +8,7 @@ Le projet a pour but le développement d'une application graphique permettant de
 
 Le projet est encore en cours de progression, nous avons des soucis au lancement de gazebo que ce soit sur machine virtuelle ou sur un linux booté sur une clé usb.
 
-Le projet a été codeé sous python.
+Le projet a été codé sous python.
 
 Le dossier source contient différents programmes permettant de lancer l'interface graphique, d'acquérir les données du déplacement du robot et aussi une base de données avec des coordonnées d'un robot qui se déplacerait dans un espace. 
 Vous pouvez voir ci-dessous une démo de l'interface graphique :
@@ -26,9 +26,10 @@ Les problèmes rencontrés lors de ce projets sont les suivants :
 - GUI : Trouver les différentes bibliothèques python pour actualiser l’acquisition de données
 - GUI : Récupération des coordonnées depuis un document pour les implanter sur le graphique
 - Acquisition de données: Réussir à ouvrir le fichier json et d’importer le PATH
-- Gazebo : Non possibilité de le lancer que ce soit sur machine virtuelle ou clé bootable, même en suivant différents tutoriels à la lettre. Soit des packages sont corrompus et même en les réinstallants ils le sont encore, ou des repositories ont disparu du git sur lequel le tuto nous envoie cloner et donc une fois lanceé il y a des fichiers manquants. Une explication a certaine erreur a été trouver sur un forum (je n'ai plus le lien) où il parle de la compatibilité des processeurs avec gazebo.
+- Gazebo : Non possibilité de le lancer que ce soit sur machine virtuelle ou clé bootable, même en suivant différents tutoriels à la lettre. Soit des packages sont corrompus et même en les réinstallant ils le sont encore, soit des repositories ont disparu du git sur lequel le tuto nous envoie cloner et donc une fois lancé il y a des fichiers manquants. Une explication à certaines erreurs a été trouvée sur un forum (je n'ai plus le lien) où il parle de la compatibilité des processeurs avec gazebo.
 - Manque de temps et de session pour faire le projet
 - Difficulté à connecter ROS avec le robot turtlebot
+
 
 Pour faire fonctionner les codes, il vous faudra installer les bibliothèques mentionnées dans le requirement.txt 
 
