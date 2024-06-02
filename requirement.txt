@@ -1,40 +1,9 @@
-Les bibliotèque nécessaire pour le code sont:
+# Les bibliotèque nécessaire pour le code sont:
 
-import json
+json / time / threading / pathlib -> Path / typing -> Iterator / odom_message -> Odometry 
 
-import time
+dataclasses -> dataclass/fields/is_dataclass / typing -> Type/TypeVar / math / numpy / tkinter
 
-import threading
+matplotlib.pyplot / matplotlib.backends.backend_tkagg / rospy / nav_msgs.msg / geometry_msgs.msg
 
-from pathlib import Path
-
-from typing import Iterator
-
-try:
-    from .odom_message import Odometry
-except ImportError:
-    from odom_message import Odometry
-
-from dataclasses import dataclass, fields, is_dataclass
-
-from typing import Type, TypeVar
-
-import math
-
-import numpy as np 
-
-import tkinter as tk
-
-from tkinter import ttk
-
-import matplotlib.pyplot as plt
-
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-
-import rospy
-
-from nav_msgs.msg import Odometry
-
-from geometry_msgs.msg import Twist
-
-import jsonpath_ng as jp #actuellement pb avec le path
+jsonpath_ng
