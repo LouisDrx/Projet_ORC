@@ -49,9 +49,10 @@ L'équipe était composée de quatre membres : Rayann, Théo, Erwan et Louis. Vo
 - Utilisation des données acquises dans la base de données sur l’interface GUI “Mouvement du robot”
 ### Erwan
 - Prise en Main du logiciel GAZEBO
-- Rédaction des spécifications fonctionnelles
+- Rédaction des spécifications fonctionnelles 
 - Élaboration des plans de test
-- Exécution des tests fonctionnels et de non-régression 
+- Exécution des tests fonctionnels et de non-régression
+- Correction des codes 
 ### Louis 
 - Prise en Main du logiciel GAZEBO
 - Supervision de la bonne collaboration via github
