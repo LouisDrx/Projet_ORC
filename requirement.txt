@@ -1,4 +1,4 @@
-# Les bibliotèque nécessaire pour le code sont:
+Les bibliotèque nécessaire pour le code sont:
 
 json / time / threading / pathlib -> Path / typing -> Iterator / odom_message -> Odometry 
 
