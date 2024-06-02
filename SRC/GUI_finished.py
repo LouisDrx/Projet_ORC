@@ -5,6 +5,56 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import numpy as np
 import threading
 import time
+import socket
+import json
+from pathlib import Path
+from typing import Iterator
+
+try:
+    from .odom_message import Odometry
+except ImportError:
+    from odom_message import Odometry
+
+DEFAULT_PATH = Path(__file__).parent / "trajectory.json"
+
+class Subscriber:
+    def __init__(self, name: str, data_class, callback=None, callback_args=None, queue_size=None, buff_size=65536, tcp_nodelay=False) -> None:
+        self._topic = name
+        self._message_type = data_class
+        self._callback = callback
+        self._stop_event = threading.Event()
+        self._time_delta = None
+        self._message_generator: Iterator[Odometry] = self._get_poses()
+        self._notifier = threading.Thread(group=None, target=self._notify_poses, args=callback_args or tuple())
+        self._notifier.start()
+
+    def is_running(self):
+        return not self._stop_event.is_set()
+
+    def stop(self):
+        self._stop_event.set()
+        self._notifier.join()
+
+    def _get_poses(self, file_path = DEFAULT_PATH) -> Iterator[Odometry]:
+        with open(file_path, "r") as trajectory_file:
+            odom_messages = json.load(trajectory_file)
+            initial_msg = Odometry.from_dict(odom_messages[0])
+            next_msg = Odometry.from_dict(odom_messages[1])
+            self._time_delta = (
+                (next_msg.header.stamp.secs + (next_msg.header.stamp.nsecs * 1e-6))
+                - (initial_msg.header.stamp.secs + (initial_msg.header.stamp.nsecs * 1e-6))
+            )
+            for odom_msg in odom_messages:
+                yield Odometry.from_dict(odom_msg)
+
+    def _notify_poses(self, *args):
+        while not self._stop_event.is_set():
+            try:
+                msg = next(self._message_generator)
+                self._callback(msg, *args)
+                time.sleep(self._time_delta)
+            except StopIteration:
+                break
 
 class RobotControlApp(tk.Tk):
     def __init__(self):
@@ -29,7 +79,7 @@ class RobotControlApp(tk.Tk):
         self.btn_connect.grid(row=1, column=2, padx=5, pady=5)
         
         self.label_status = ttk.Label(self.frame_connexion, text="Statut: Déconnecté", foreground="red")
-        self.label_status.grid(row=0, column=2, padx=5, pady=5)        
+        self.label_status.grid(row=0, column=2, padx=5, pady=5)
 
         self.btn_start = ttk.Button(self.frame_connexion, text="START", command=self.start_acquisition)
         self.btn_start.grid(row=2, column=0, padx=5, pady=5)
@@ -72,6 +122,9 @@ class RobotControlApp(tk.Tk):
 
         # Variables pour l'état de l'acquisition
         self.acquisition_en_cours = False
+        self.subscriber = None
+        self.x_data = []
+        self.y_data = []
 
     def check_connection(self):
         ip = self.entry_ip.get()
@@ -84,31 +137,31 @@ class RobotControlApp(tk.Tk):
         except (socket.timeout, ConnectionRefusedError, OSError):
             self.label_status.config(text="Statut: Déconnecté", foreground="red")
             self.btn_start.config(state=tk.DISABLED)
-            self.btn_stop.config(state=tk.DISABLED)
-    
+            self.btn_stop.config(state=tk.DISABLED)    
+
     def start_acquisition(self):
         self.acquisition_en_cours = True
         self.label_acquisition.config(text="Acquisition en cours", foreground="green")
-        self.thread_acquisition = threading.Thread(target=self.actualiser_donnees)
-        self.thread_acquisition.start()
+        self.subscriber = Subscriber("/odom", Odometry, callback=self.actualiser_donnees)
 
     def stop_acquisition(self):
         self.acquisition_en_cours = False
         self.label_acquisition.config(text="Acquisition arrêtée", foreground="red")
+        if self.subscriber:
+            self.subscriber.stop()
+            self.subscriber = None
 
-    def actualiser_donnees(self):
-        while self.acquisition_en_cours:
-            # Actualiser les données des graphiques
-            # Simulation de données pour l'exemple
-            x = np.linspace(0, 10, 100)
-            y = np.sin(x)
-            self.ax1.clear()
-            self.ax1.plot(x, y)
-            self.canvas.draw()
+    def actualiser_donnees(self, msg: Odometry):
+        if not self.acquisition_en_cours:
+            return
 
-            # Actualiser la position relative du robot sur un plan 2D
-            # Simulation de données pour l'exemple
-            time.sleep(0.5)
+        self.x_data.append(msg.pose.position.x)
+        self.y_data.append(msg.pose.position.y)
+        
+        self.ax1.clear()
+        self.ax1.plot(self.x_data, self.y_data, marker='o')
+
+        self.canvas.draw()
 
     def commande_avancer(self):
         vitesse_lineaire = self.scale_vitesse_lineaire.get()
