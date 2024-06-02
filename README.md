@@ -34,5 +34,32 @@ Pour faire fonctionner les codes, il vous faudra installer les bibliothèques me
 
 Pour retrouver les consignes de l'exercice demandé, veuillez consulter le fichier consigne.md
 
+## Répartition des Tâches 
+L'équipe était composée de quatre membres : Rayann, Théo, Erwan et Louis. Voici la répartition des tâches : 
+### Rayann 
+- Développement du code python pour l’acquisition des données sous ROS 
+- Développement du code Python pour l’acquisition des données via le dossier données 
+- Gestion de la base de données 
+- Documentation du Projet 
+### Théo 
+- Conception de l'interface utilisateur avec TKinter
+- Développement des composants graphiques
+- Mise en œuvre des interactions utilisateur
+- Tests d’interface utilisateur
+- Utilisation des données acquises dans la base de données sur l’interface GUI “Mouvement du robot”
+### Erwan
+- Prise en Main du logiciel GAZEBO
+- Rédaction des spécifications fonctionnelles
+- Élaboration des plans de test
+- Exécution des tests fonctionnels et de non-régression 
+### Louis 
+- Prise en Main du logiciel GAZEBO
+- Supervision de la bonne collaboration via github
+- Rédaction du README et du requirment
+- Élaboration des plans de test
+- Exécution des tests fonctionnels et de non-régression
+- Vérification que les codes suivent la convention Pep8 
+
+
 ### Conclusion 
 Le projet a été en partie réussi grâce à une planification rigoureuse, une répartition claire des tâches et une bonne communication entre les membres de l’équipe. Malgré les défis rencontrés, nous avons su les surmonter et livrer une application robuste et performante. Les connaissances et les compétences acquises durant ce projet seront précieuses pour les futurs développements. Le seul point noir de ce projet est l'utilisation de Gazebo malgré des dixaines d'heures passé à essayé de le faire fonctionné.
