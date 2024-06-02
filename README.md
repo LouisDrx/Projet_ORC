@@ -17,6 +17,10 @@ Vous pouvez voir ci-dessous une démo de l'interface graphique :
 
 NB : L'apparition d'un sinus sur le graphique est voulue dans cette démo
 
+Dans cette deuxième démo on lance le programe avec une base de donnée ou l'on récupère des coordonnées, on peut voir sur le graphique le chemin parcouru par le robot.
+
+![Animation_coord_doc](https://github.com/LouisDrx/Projet_ORC/assets/153221009/7fb3d86c-5aed-4bae-902e-8fb0c4affd3f)
+
 Pour faire fonctionner les codes, il vous faudra installer les bibliotèques mentionnées dans le requirement.txt 
 
 Pour retrouver les consignes de l'exercice demandé, veuillez consulter le fichier consigne.md
