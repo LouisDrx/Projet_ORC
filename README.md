@@ -35,4 +35,4 @@ Pour faire fonctionner les codes, il vous faudra installer les bibliothèques me
 Pour retrouver les consignes de l'exercice demandé, veuillez consulter le fichier consigne.md
 
 ### Conclusion 
-Le projet a été une réussite grâce à une planification rigoureuse, une répartition claire des tâches et une bonne communication entre les membres de l’équipe. Malgré les défis rencontrés, nous avons su les surmonter et livrer une application robuste et performante. Les connaissances et les compétences acquises durant ce projet seront précieuses pour les futurs développements.
+Le projet a été en partie réussi grâce à une planification rigoureuse, une répartition claire des tâches et une bonne communication entre les membres de l’équipe. Malgré les défis rencontrés, nous avons su les surmonter et livrer une application robuste et performante. Les connaissances et les compétences acquises durant ce projet seront précieuses pour les futurs développements. Le seul point noir de ce projet est l'utilisation de Gazebo malgré des dixaines d'heures passé à essayé de le faire fonctionné.
