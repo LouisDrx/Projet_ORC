@@ -8,6 +8,8 @@ Le projet à pour but le développement d'une application graphique permettant d
 
 Le projet est encore en cours de progression, nous avons des soucis au lancement de gazebo que ce soit sur machine virtuel ou sur un linux booter sur une clé usb.
 
+Le projet a été coder sous python.
+
 Le dossier source contient différend programe permettant de lancer l'interface graphique, d'acquérir les données du déplacement du robot et aussi une base de données avec des coordonnées d'un robot qui se déplacerais dans un espace 
 
 Pour faire fonctionner les codes il vous faudra installer les bibliotèques mentionner dans le requirement.txt 
