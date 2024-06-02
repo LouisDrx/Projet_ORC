@@ -10,8 +10,8 @@ Le projet est encore en cours de progression, nous avons des soucis au lancement
 
 Le projet a été coder sous python.
 
-Le dossier source contient différend programe permettant de lancer l'interface graphique, d'acquérir les données du déplacement du robot et aussi une base de données avec des coordonnées d'un robot qui se déplacerais dans un espace 
-
+Le dossier source contient différend programe permettant de lancer l'interface graphique, d'acquérir les données du déplacement du robot et aussi une base de données avec des coordonnées d'un robot qui se déplacerais dans un espace. 
+Vous pouvez voir ci-dessous une démo de l'interface graphique.
 ![Animation](https://github.com/LouisDrx/Projet_ORC/assets/153221009/cd3fdbb8-0531-4a24-b441-604f8f6d9f7a)
 
 Pour faire fonctionner les codes il vous faudra installer les bibliotèques mentionner dans le requirement.txt 
