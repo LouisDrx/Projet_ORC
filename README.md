@@ -58,10 +58,11 @@ L'équipe était composée de quatre membres : Rayann, Théo, Erwan et Louis. Vo
 - Utilisation des données acquises dans la base de données sur l’interface GUI “Mouvement du robot”
 ### Erwan
 - Prise en Main du logiciel GAZEBO
+- Correction des codes
 - Rédaction des spécifications fonctionnelles 
 - Élaboration des plans de test
 - Exécution des tests fonctionnels
-- Correction des codes 
+ 
 ### Louis 
 - Prise en Main du logiciel GAZEBO
 - Supervision de la bonne collaboration via github
@@ -72,4 +73,12 @@ L'équipe était composée de quatre membres : Rayann, Théo, Erwan et Louis. Vo
 
 
 ### Conclusion 
-Le projet a été en partie réussi grâce à une planification rigoureuse, une répartition claire des tâches et une bonne communication entre les membres de l’équipe. Malgré les défis rencontrés, nous avons su les surmonter et livrer une application robuste et performante. Les connaissances et les compétences acquises durant ce projet seront précieuses pour les futurs développements. Le seul point noir de ce projet est l'utilisation de Gazebo malgré des dixaines d'heures passées à essayer de le faire fonctionner.
+Le projet a été en partie réaalisé.
+Il est possible de sélectionner des commandes sur une interface graphique et visualiser des simulations sur cette meme interface. 
+La récupération des données sur Gazobo est le point qui pose problème à notre projet. 
+Le temps passé sur les dualboots ou les VM n'ont pas permis de l'utiliser. 
+Nous nous sommes rabatus sur l'utilisation des données fournies. 
+
+A traves nos travaux colaboratifs sur Github, nous nous sommes rendu compte de l'importance de bien documenter ses avances et qu'il faut savoir faire machine arrière dans le développement de son pour que le code s'integre facilement avec le minimum d'erreurs. 
+
+Nous nous sommes rendu compte du processus de développement de code pour répondre à un besoin concret.  
