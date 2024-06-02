@@ -73,12 +73,7 @@ L'équipe était composée de quatre membres : Rayann, Théo, Erwan et Louis. Vo
 
 
 ### Conclusion 
-Le projet a été en partie réaalisé.
-Il est possible de sélectionner des commandes sur une interface graphique et visualiser des simulations sur cette meme interface. 
-La récupération des données sur Gazobo est le point qui pose problème à notre projet. 
-Le temps passé sur les dualboots ou les VM n'ont pas permis de l'utiliser. 
-Nous nous sommes rabatus sur l'utilisation des données fournies. 
+Le projet a été en partie réalisé. Il est possible de sélectionner des commandes sur une interface graphique et de visualiser des simulations sur cette même interface. La récupération des données sur Gazebo est le point qui pose problème dans notre projet. Le temps passé sur les dual boots ou les VM n’ont pas permis de l’utiliser. Nous nous sommes rabattus sur l’utilisation des données fournies.
+A travers  nos travaux collaboratifs sur GIthub, nous nous sommes rendu compte de l’importance de bien documenter ses avances et qu’il fallait savoir faire machine arrière dans le développement de son code pour une bonne intégration avec un minimum de problèmes au sein du projet. 
+Nous nous sommes aussi rendu compte  du processus de développement de code pour répondre à un besoin concret. 
 
-A traves nos travaux colaboratifs sur Github, nous nous sommes rendu compte de l'importance de bien documenter ses avances et qu'il faut savoir faire machine arrière dans le développement de son pour que le code s'integre facilement avec le minimum d'erreurs. 
-
-Nous nous sommes rendu compte du processus de développement de code pour répondre à un besoin concret.  
