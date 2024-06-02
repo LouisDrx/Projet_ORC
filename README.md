@@ -24,6 +24,7 @@ Dans cette deuxième démo, on lance le programme avec une base de données où 
 Les problèmes rencontrés lors de ce projets sont les suivants :
 
 - GUI : Trouver les différentes bibliothèques python pour actualiser l’acquisition de données
+- GUI : Récupération des coordonnées depuis un document pour les implanter sur le graphique
 - Acquisition de données: Réussir à ouvrir le fichier json et d’importer le PATH
 - Gazebo : Non possibilité de le lancer que ce soit sur machine virtuelle ou clé bootable, même en suivant différents tuto a la lettre impossible, soit des packages sont corrompus et même en les réinstallant ils le sont encore, ou des repository ont disparu du git sur lequel le tuto nous envoie cloner et donc une fois lancer il y a des fichier manquant. Une explication a certaine erreur a été trouver sur un forum (je n'ai plus le lien) ou il parle de la compatibilité des processeurs avec gazebo.
 - Manque de temps et de session pour faire le projet
