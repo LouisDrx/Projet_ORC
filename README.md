@@ -11,6 +11,14 @@ Le projet est encore en cours de progression, nous avons des soucis au lancement
 Le projet a été codé sous python.
 
 Le dossier source contient différents programmes permettant de lancer l'interface graphique, d'acquérir les données du déplacement du robot et aussi une base de données avec des coordonnées d'un robot qui se déplacerait dans un espace. 
+
+### Utilisation fonctionnalités :
+- Lancer pose_subscriber.py pour générer les coordonnées de position du Turtle bot au cours du temps
+- Lancer Gui_finished.py pour lancer l'interface graphique
+    - La connexion avec le robot n'est pas fonctionnelle 
+    - Appuier sur start permet de voir l'affichage graphique d'une      simulation de déplacement 
+    - Modifier les curseurs de commande et appuier sur les bouttons de commande permet d'informe du chagement de directive operatoire du robot. 
+
 Vous pouvez voir ci-dessous une démo de l'interface graphique :
 
 ![Animation](https://github.com/LouisDrx/Projet_ORC/assets/153221009/cd3fdbb8-0531-4a24-b441-604f8f6d9f7a)
@@ -52,14 +60,14 @@ L'équipe était composée de quatre membres : Rayann, Théo, Erwan et Louis. Vo
 - Prise en Main du logiciel GAZEBO
 - Rédaction des spécifications fonctionnelles 
 - Élaboration des plans de test
-- Exécution des tests fonctionnels et de non-régression
+- Exécution des tests fonctionnels
 - Correction des codes 
 ### Louis 
 - Prise en Main du logiciel GAZEBO
 - Supervision de la bonne collaboration via github
 - Rédaction du README et du requirment
 - Élaboration des plans de test
-- Exécution des tests fonctionnels et de non-régression
+- Exécution des tests fonctionnels  
 - Vérification que les codes suivent la convention Pep8 
 
 
