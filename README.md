@@ -26,7 +26,7 @@ Les problèmes rencontrés lors de ce projets sont les suivants :
 - GUI : Trouver les différentes bibliothèques python pour actualiser l’acquisition de données
 - GUI : Récupération des coordonnées depuis un document pour les implanter sur le graphique
 - Acquisition de données: Réussir à ouvrir le fichier json et d’importer le PATH
-- Gazebo : Non possibilité de le lancer que ce soit sur machine virtuelle ou clé bootable, même en suivant différents tuto a la lettre impossible, soit des packages sont corrompus et même en les réinstallant ils le sont encore, ou des repository ont disparu du git sur lequel le tuto nous envoie cloner et donc une fois lancer il y a des fichier manquant. Une explication a certaine erreur a été trouver sur un forum (je n'ai plus le lien) ou il parle de la compatibilité des processeurs avec gazebo.
+- Gazebo : Non possibilité de le lancer que ce soit sur machine virtuelle ou clé bootable, même en suivant différents tutoriels à la lettre. Soit des packages sont corrompus et même en les réinstallants ils le sont encore, ou des repositories ont disparu du git sur lequel le tuto nous envoie cloner et donc une fois lanceé il y a des fichiers manquants. Une explication a certaine erreur a été trouver sur un forum (je n'ai plus le lien) où il parle de la compatibilité des processeurs avec gazebo.
 - Manque de temps et de session pour faire le projet
 - Difficulté à connecter ROS avec le robot turtlebot
 
@@ -63,4 +63,4 @@ L'équipe était composée de quatre membres : Rayann, Théo, Erwan et Louis. Vo
 
 
 ### Conclusion 
-Le projet a été en partie réussi grâce à une planification rigoureuse, une répartition claire des tâches et une bonne communication entre les membres de l’équipe. Malgré les défis rencontrés, nous avons su les surmonter et livrer une application robuste et performante. Les connaissances et les compétences acquises durant ce projet seront précieuses pour les futurs développements. Le seul point noir de ce projet est l'utilisation de Gazebo malgré des dixaines d'heures passé à essayé de le faire fonctionné.
+Le projet a été en partie réussi grâce à une planification rigoureuse, une répartition claire des tâches et une bonne communication entre les membres de l’équipe. Malgré les défis rencontrés, nous avons su les surmonter et livrer une application robuste et performante. Les connaissances et les compétences acquises durant ce projet seront précieuses pour les futurs développements. Le seul point noir de ce projet est l'utilisation de Gazebo malgré des dixaines d'heures passées à essayer de le faire fonctionner.
